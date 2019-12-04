@@ -1,6 +1,4 @@
-package PatternBank;
-
-import java.math.BigDecimal;
+package SingletonPattern.InitialBank;
 
 public class BankAccount {
     private int id;
@@ -9,5 +7,13 @@ public class BankAccount {
     public BankAccount(int id, Double initialBalance) {
         this.id = id;
         balance = initialBalance;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public double getID() {
+        return id;
     }
 }
