@@ -10,6 +10,7 @@ public class Bank {
     public Bank(String bankName) {
         this.bankName = bankName;
         uniqueAccountID = 0;
+        bankAccounts = new HashMap<>();
     }
 
     public BankAccount addAccount(Double initialBalance) {

@@ -13,7 +13,7 @@ public class BankAccount {
         return balance;
     }
 
-    public double getID() {
+    public int getID() {
         return id;
     }
 }

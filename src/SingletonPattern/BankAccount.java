@@ -1,4 +1,4 @@
-package SingletonPattern.InitialBank;
+package SingletonPattern;
 
 public class BankAccount {
     private int id;
@@ -13,7 +13,7 @@ public class BankAccount {
         return balance;
     }
 
-    public double getID() {
+    public int getID() {
         return id;
     }
 }

@@ -1,15 +1,18 @@
-package SingletonPattern.InitialBank;
+package SingletonPattern;
 
 import java.util.HashMap;
 
 public class BankSingleton {
+    private String bankName;
     private HashMap<Integer, BankAccount> bankAccounts;
     private int uniqueAccountID;
-    private String bankName;
 
     private static BankSingleton bankSingleton;
 
-    private BankSingleton(){}
+    private BankSingleton(){
+        uniqueAccountID = 0;
+        bankAccounts = new HashMap<>();
+    }
 
     public static BankSingleton getInstance(){
         if (bankSingleton == null) {
