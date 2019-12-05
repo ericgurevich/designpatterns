@@ -1,4 +1,6 @@
-package SingletonPattern;
+package StrategyPattern;
+
+import StrategyPattern.BankSingleton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +25,7 @@ public class User {
         }
     }
 
-
-
-
+    public double withdraw(int accountID, double amount) {
+        return BankSingleton.getInstance().getAccountByID(accountID).withdraw(amount);
+    }
 }
