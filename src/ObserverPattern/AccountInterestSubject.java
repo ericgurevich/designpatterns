@@ -24,8 +24,7 @@ public class AccountInterestSubject implements Subject {
     public void notifyObservers() {
         BankAccount bankAccount;
         for (int id : interestEarningAccounts) {
-            bankAccount = BankSingleton.getInstance().getAccountByID(id);
-            bankAccount.update(bankAccount.getBalance() * interestRate);
+            BankSingleton.getInstance().getAccountByID(id).update(interestRate);
         }
     }
 

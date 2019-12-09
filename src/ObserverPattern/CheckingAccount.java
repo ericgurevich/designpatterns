@@ -56,7 +56,7 @@ public class CheckingAccount implements BankAccount {
     }
 
     @Override
-    public void update(Object interestAmount) {
-        deposit((Double) interestAmount);
+    public void update(Object interestRate) {
+        deposit(getBalance() * (Double) interestRate);
     }
 }
