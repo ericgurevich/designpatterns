@@ -8,7 +8,7 @@ public class OtherBank {
     private boolean ableToWithdraw;
     private boolean ableToDeposit;
 
-    private enum TransferType {
+    public enum TransferType {
         WITHDRAW,
         DEPOSIT
     }
@@ -19,7 +19,7 @@ public class OtherBank {
         ableToWithdraw = false;
     }
 
-    public double Transfer(TransferType transferType, double amount, int accountID) {
+    public double transfer(TransferType transferType, double amount, int accountID) {
         switch (transferType) {
             case WITHDRAW:
                 if (!otherBankAccounts.containsKey(accountID)) {
@@ -33,7 +33,6 @@ public class OtherBank {
                 }
 
                 getAccountByID(accountID).deposit(ableToDeposit, amount);
-
                 return 0;
             default:
                 throw new IllegalArgumentException("No transfer type.");
@@ -54,6 +53,14 @@ public class OtherBank {
 
     public OtherBankAccount getAccountByID(int id) {
         return otherBankAccounts.get(id);
+    }
+
+    public void setAbleToWithdraw(Boolean ableToWithdraw) {
+        this.ableToWithdraw = ableToWithdraw;
+    }
+
+    public void setAbleToDeposit(Boolean ableToDeposit) {
+        this.ableToDeposit = ableToDeposit;
     }
 
 }

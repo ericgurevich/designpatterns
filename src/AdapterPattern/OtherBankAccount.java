@@ -33,4 +33,8 @@ public class OtherBankAccount {
     public int getID() {
         return id;
     }
+
+    public double getBalance() {
+        return balance;
+    }
 }
